@@ -9,7 +9,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 @Aspect
 public class AuditInterceptor {
 
-	private static final Logger log = Logger.getLogger("audit");
+	private static final Logger log = Logger.getLogger("AOP_audit");
 
 	@Before("execution(* com.jhcm.audit.backend.repositories.*.save(..))")
 	public void logBefore(JoinPoint aPoint) {
